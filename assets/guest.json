@@ -1,0 +1,127 @@
+[
+  {
+    "id": "1",
+    "avatar": "https://images.pexels.com/photos/301958/pexels-photo-301958.jpeg",
+    "name": "Denisa",
+    "email": "denisa@mail.com",
+    "phone": "+6234567890",
+    "origin": "Thailand",
+    "joindate": "Dec 2022",
+    "booking": [
+      {
+        "booking_id": "HMASJKSSCL",
+        "booking_name": "attra bamboology",
+        "booking_start_date": "14-08-2022",
+        "booking_status": "confirmed",
+        "booking_end_date": "12-09-2022"
+      },
+      {
+        "booking_id": "HMASJKSSCL",
+        "booking_name": "attra bamboology",
+        "booking_status": "Canceled",
+        "booking_start_date": "14-08-2022",
+        "booking_end_date": "12-09-2022"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "avatar": "https://assets.pikiran-rakyat.com/crop/0x0:719x499/x/photo/2021/09/29/3842110041.jpg",
+    "name": "Kevin",
+    "email": "kevin@mail.com",
+    "phone": "+6234567890",
+    "origin": "Bogor,Indonesia",
+    "joindate": "Dec 2022",
+    "booking": [
+      {
+        "booking_id": "HMASJKSSDL",
+        "booking_name": "attra bamboology",
+        "booking_start_date": "14-08-2022",
+        "booking_status": "confirmed",
+        "booking_end_date": "12-09-2022"
+      },
+      {
+        "booking_id": "HMASJKSSCL",
+        "booking_name": "attra bamboology",
+        "booking_start_date": "14-08-2022",
+        "booking_status": "confirmed",
+        "booking_end_date": "12-09-2022"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "avatar": "https://i.pinimg.com/736x/47/ba/0e/47ba0e3ad86ae30c02abf8686e215b3e.jpg",
+    "name": "Robert",
+    "email": "robert@mail.com",
+    "phone": "+6234567890",
+    "origin": "Paris,France",
+    "joindate": "Dec 2022",
+    "booking": [
+      {
+        "booking_id": "HMASJKSSCL",
+        "booking_name": "attra bamboology",
+        "booking_start_date": "14-08-2022",
+        "booking_status": "confirmed",
+        "booking_end_date": "12-09-2022"
+      },
+      {
+        "booking_id": "HMASJKSSCL",
+        "booking_name": "attra bamboology",
+        "booking_start_date": "14-08-2022",
+        "booking_status": "canceled",
+        "booking_end_date": "12-09-2022"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "avatar": "https://thumbs.dreamstime.com/b/handsome-man-black-suit-white-shirt-posing-studio-attractive-guy-fashion-hairstyle-confident-man-short-beard-125019349.jpg",
+    "name": "Mark Dome",
+    "email": "dome@mail.com",
+    "phone": "+6234567890",
+    "origin": "New York",
+    "joindate": "Dec 2022",
+    "booking": [
+      {
+        "booking_id": "HMASJKSRLL",
+        "booking_name": "attra bamboology",
+        "booking_start_date": "14-08-2022",
+        "booking_status": "canceled",
+        "booking_end_date": "12-09-2022"
+      },
+      {
+        "booking_id": "HMASJKSSCL",
+        "booking_name": "attra bamboology",
+        "booking_start_date": "14-08-2022",
+        "booking_status": "confirmed",
+        "booking_end_date": "12-09-2022"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "avatar": "https://c4.wallpaperflare.com/wallpaper/770/462/564/pretty-girl-pictures-1920x1200-wallpaper-preview.jpg",
+    "name": "Cindy Crawfor",
+    "email": "cindy@mail.com",
+    "phone": "+6234567890",
+    "origin": "Philiphines",
+    "joindate": "Dec 2022",
+    "booking": [
+      {
+        "booking_id": "HMASJKSSCL",
+        "booking_name": "attra bamboology",
+        "booking_start_date": "14-08-2022",
+        "booking_status": "confirmed",
+        "booking_end_date": "12-09-2022"
+      },
+      {
+        "booking_id": "HMASJKSSCL",
+        "booking_name": "attra bamboology",
+        "booking_start_date": "14-08-2022",
+        "booking_status": "confirmed",
+        "booking_end_date": "12-09-2022"
+      }
+    ]
+  }
+]
