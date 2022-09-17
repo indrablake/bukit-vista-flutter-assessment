@@ -81,14 +81,15 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+/* Bottom Navigation bar */
   Container buildMyNavBar(BuildContext context) {
     return Container(
       height: 60,
-      decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+      decoration: const BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
         ),
       ),
       child: Row(
@@ -102,15 +103,15 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
             icon: pageIndex == 0
-                ? const Icon(
+                ? Icon(
                     Icons.home_filled,
-                    color: Colors.white,
-                    size: 35,
+                    color: Theme.of(context).primaryColor,
+                    size: 30,
                   )
                 : const Icon(
                     Icons.home_outlined,
-                    color: Colors.white,
-                    size: 35,
+                    color: Colors.grey,
+                    size: 30,
                   ),
           ),
           IconButton(
@@ -121,15 +122,15 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
             icon: pageIndex == 1
-                ? const Icon(
+                ? Icon(
                     Icons.work_rounded,
-                    color: Colors.white,
-                    size: 35,
+                    color: Theme.of(context).primaryColor,
+                    size: 30,
                   )
                 : const Icon(
                     Icons.work_outline_outlined,
-                    color: Colors.white,
-                    size: 35,
+                    color: Colors.grey,
+                    size: 30,
                   ),
           ),
           IconButton(
@@ -140,15 +141,15 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
             icon: pageIndex == 2
-                ? const Icon(
-                    Icons.widgets_rounded,
-                    color: Colors.white,
+                ? Icon(
+                    Icons.notifications,
+                    color: Theme.of(context).primaryColor,
                     size: 35,
                   )
                 : const Icon(
-                    Icons.widgets_outlined,
-                    color: Colors.white,
-                    size: 35,
+                    Icons.notifications_none,
+                    color: Colors.grey,
+                    size: 30,
                   ),
           ),
           IconButton(
@@ -159,15 +160,15 @@ class _MyHomePageState extends State<MyHomePage> {
               });
             },
             icon: pageIndex == 3
-                ? const Icon(
+                ? Icon(
                     Icons.person,
-                    color: Colors.white,
-                    size: 35,
+                    color: Theme.of(context).primaryColor,
+                    size: 30,
                   )
                 : const Icon(
                     Icons.person_outline,
-                    color: Colors.white,
-                    size: 35,
+                    color: Colors.grey,
+                    size: 30,
                   ),
           ),
         ],

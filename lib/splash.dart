@@ -3,9 +3,10 @@ import 'dart:async';
 import 'package:bukit_vista/main.dart';
 import 'package:flutter/material.dart';
 
+// ignore: use_key_in_widget_constructors
 class SplashScreen extends StatefulWidget {
   final Color backgroundColor = Colors.white;
-  final TextStyle styleTextUnderTheLoader = TextStyle(
+  final TextStyle styleTextUnderTheLoader = const TextStyle(
       fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.black);
 
   @override
@@ -19,9 +20,6 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     _loadWidget();
     super.initState();
-    // Future.delayed(const Duration(seconds: 4), () {
-    //   getSharedPrefs();
-    // });
   }
 
   _loadWidget() async {
@@ -52,6 +50,7 @@ class _SplashScreenState extends State<SplashScreen> {
               children: <Widget>[
                 Expanded(
                   flex: 7,
+                  // ignore: avoid_unnecessary_containers
                   child: Container(
                       child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +75,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Expanded(
                   child: Column(
                     children: <Widget>[
-                      CircularProgressIndicator(),
+                      const CircularProgressIndicator(),
                       Container(
                         height: 5.0,
                       ),

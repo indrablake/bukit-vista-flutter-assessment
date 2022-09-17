@@ -115,11 +115,14 @@ class _GuestDetailsState extends State<GuestDetails>
               margin: const EdgeInsets.all(10),
               child: ClipRect(
                 child: ListTile(
-                  leading: CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.transparent,
-                    backgroundImage: NetworkImage(widget.model.avatar),
-                  ),
+                  leading: ClipOval(
+                      child: FadeInImage.assetNetwork(
+                    fit: BoxFit.cover,
+                    placeholder: 'assets/user.png',
+                    image: widget.model.avatar,
+                    height: 50,
+                    width: 50,
+                  )),
                   title: Text(
                     widget.model.name,
                     style: const TextStyle(

@@ -2,7 +2,7 @@
     package="com.dediindrajaya.bukit_vista">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="bukit_vista"
+        android:label="Bukit Vista"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

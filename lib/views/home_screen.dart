@@ -13,8 +13,11 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
   final List<GuestModel> _listGuest = [];
+  late AnimationController controller;
+  late Animation<Offset> offset;
   Future<void> readJson() async {
     final String response = await rootBundle.loadString('assets/guest.json');
     final data = await json.decode(response);
@@ -27,6 +30,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
+    controller =
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
+
+    offset = Tween<Offset>(begin: Offset.zero, end: const Offset(0.0, 1.0))
+        .animate(controller);
     readJson();
     super.initState();
   }
@@ -76,12 +84,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: ListTile(
                             leading: Hero(
                               tag: 'avatar-' + _listGuest[index].id,
-                              child: CircleAvatar(
-                                radius: 30,
-                                backgroundColor: Colors.transparent,
-                                backgroundImage:
-                                    NetworkImage(_listGuest[index].avatar),
-                              ),
+                              child: ClipOval(
+                                  child: FadeInImage.assetNetwork(
+                                fit: BoxFit.cover,
+                                placeholder:
+                                    'assets/user.png', // Before image load
+                                image: _listGuest[index]
+                                    .avatar, // After image load
+                                height: 50,
+                                width: 50,
+                              )),
                             ),
                             title: Text(_listGuest[index].name),
                             subtitle: Text(_listGuest[index].origin),
@@ -104,9 +116,26 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   _openDetail(context, guest) {
-    final route = MaterialPageRoute(
-      builder: (context) => GuestDetails(model: guest),
+    Navigator.push(
+      context,
+      PageRouteBuilder<dynamic>(
+        pageBuilder: (BuildContext context, Animation<double> animation,
+                Animation<double> secondaryAnimation) =>
+            GuestDetails(model: guest),
+        transitionsBuilder: (
+          BuildContext context,
+          Animation<double> animation,
+          Animation<double> secondaryAnimation,
+          Widget child,
+        ) {
+          final Tween<Offset> offsetTween = Tween<Offset>(
+              begin: const Offset(1.0, 0.0), end: const Offset(0.0, 0.0));
+          final Animation<Offset> slideInFromTheRightAnimation =
+              offsetTween.animate(animation);
+          return SlideTransition(
+              position: slideInFromTheRightAnimation, child: child);
+        },
+      ),
     );
-    Navigator.push(context, route);
   }
 }

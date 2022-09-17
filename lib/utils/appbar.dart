@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class AppbarWidget {
   static getAppBottomView() {
     return Container(
-        padding: const EdgeInsets.only(bottom: 35, left: 35, right: 35),
+        padding: const EdgeInsets.only(bottom: 35, left: 20, right: 15),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -33,7 +33,7 @@ class AppbarWidget {
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(10.0),
                     )),
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.white),
@@ -42,7 +42,7 @@ class AppbarWidget {
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ));
   }
